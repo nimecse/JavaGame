@@ -1,0 +1,665 @@
+// here i have included some header files
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+
+// here i am defining some constant values for my commands
+#define START "start"
+#define EXIT "exit"
+#define SCORE "score"
+#define HELP "help"
+
+//Global variable
+
+int score=0;
+char user_name[50];
+
+int main()
+{
+   int score=0;
+    char user_input [10] ;
+
+
+    int question_count=0;
+
+    printf("\n\t\t\tQUIZE GAME\n\t\t==========================\n");
+
+    start:
+        printf("\n\ttype start and hit enter to start the game\n");
+        printf("\n\ttype exit and hit enter to exit the game\n");
+        printf("\n\ttype score and hit enter to view your score\n");
+        printf("\n\ttype help and hit enter to get game instructions\n");
+//    printf("\n\ttype man and hit enter to view command manual and restart\n");
+        printf("\nWaiting for your input:- ");
+    scanf("%s",&user_input);
+
+
+    if(!strcmp(user_input,START))
+    {
+        system("cls");
+        printf("Enter your name: ");
+        scanf("%s",&user_name);
+        printf("\n\n");
+
+        game:
+        srand(time(NULL));
+        int question_number = rand()%24;
+//start questions
+
+        if(question_number==0)
+        {
+
+            printf("FFC stands for");
+            printf("\na. Foreign Finance Corporation\t\tb. Film Finance Corporation \nc. Federation of Football Council \td. None of the above\n");
+            scanf("%s",&user_input);
+            if(!strcmp(user_input,EXIT))
+            {
+                exit(1);
+            }
+            else if(!strcmp(user_input,SCORE))
+            {
+                printf("Hello %s your total score: %d",user_name,score);
+            }
+            else if(!strcmp(user_input,"b"))
+            {
+                score+=10;
+                printf("Correct answer!\n\n");
+                goto game;
+
+            }
+            else {
+
+                printf("Wrong answer!\nCorrect answer b");
+            }
+        }
+        else if(question_number==1)
+        {
+            printf("For which of the following disciplines is Nobel prize awarded?");
+            printf("\na. Physics & chemistry\t\t\tb. Physiology & medicine\nc. Literature, peace & economics \td. All of the above\n");
+            scanf("%s",&user_input);
+            if(!strcmp(user_input,EXIT))
+            {
+                exit(1);
+            }
+            else if(!strcmp(user_input,SCORE))
+            {
+                printf("Hello %s your total score: %d",user_name,score);
+            }
+            else if(!strcmp(user_input,"d"))
+            {
+                score+=10;
+                printf("Correct answer!\n\n");
+                goto game;
+
+            }
+            else {
+                printf("\nwrong answer!\nCorrect answer d");
+            }
+
+        }
+
+        else if(question_number==2)
+        {
+            printf("Epsom (England) is the place associated with.");
+            printf("\na. Horse racing\tb. Polo\nc. shooting \td. Snooker\n");
+            scanf("%s",&user_input);
+            if(!strcmp(user_input,EXIT))
+            {
+                exit(1);
+            }
+            else if(!strcmp(user_input,SCORE))
+            {
+                printf("Hello %s your total score: %d",user_name,score);
+            }
+            else if(!strcmp(user_input,"a"))
+            {
+                score+=10;
+                printf("Correct answer!\n\n");
+                goto game;
+
+            }
+            else {
+                printf("\nwrong answer!\nCorrect answer a");
+            }
+
+        }
+        else if(question_number==3)
+        {
+            printf("First china war was fought between");
+            printf("\na. China and Britain\tb. China and France\nc. China and Egypt\td. China and Greek\n");
+            scanf("%s",&user_input);
+            if(!strcmp(user_input,EXIT))
+            {
+                exit(1);
+            }
+            else if(!strcmp(user_input,SCORE))
+            {
+                printf("Hello %s your total score: %d",user_name,score);
+            }
+            else if(!strcmp(user_input,"a"))
+            {
+                score+=10;
+                printf("Correct answer!\n\n");
+                goto game;
+
+            }
+            else {
+                printf("\nwrong answer!\nCorrect answer a");
+            }
+
+        }
+        else if(question_number==4)
+        {
+            printf("Playground of Europe?");
+            printf("\na. Scotland \tb. Zanzibar\nc. Switzerland \td. Jaipur\n");
+            scanf("%s",&user_input);
+            if(!strcmp(user_input,EXIT))
+            {
+                exit(1);
+            }
+            else if(!strcmp(user_input,SCORE))
+            {
+                printf("Hello %s your total score: %d",user_name,score);
+            }
+            else if(!strcmp(user_input,"c"))
+            {
+                score+=10;
+                printf("Correct answer!\n\n");
+                goto game;
+
+            }
+            else {
+                printf("\nwrong answer!\nCorrect answer c");
+            }
+
+        }
+        else if(question_number==5)
+        {
+            printf("ICC 2014 T-20 World cup winner?");
+            printf("\na. India\tb. Bangladesh\nc. Sreelanka \td. Australia\n");
+            scanf("%s",&user_input);
+            if(!strcmp(user_input,EXIT))
+            {
+                exit(1);
+            }
+            else if(!strcmp(user_input,SCORE))
+            {
+                printf("Hello %s your total score: %d",user_name,score);
+            }
+            else if(!strcmp(user_input,"c"))
+            {
+                score+=10;
+                printf("Correct answer!\n\n");
+                goto game;
+
+            }
+            else {
+                printf("\nwrong answer!\nCorrect answer c");
+            }
+
+        }
+        else if(question_number==6)
+        {
+            printf("Nobel peace prize 2014 winner?");
+            printf("\na. Malala \tb. Patrick\nc. Edvard \td. William\n");
+            scanf("%s",&user_input);
+            if(!strcmp(user_input,EXIT))
+            {
+                exit(1);
+            }
+            else if(!strcmp(user_input,SCORE))
+            {
+                printf("Hello %s your total score: %d",user_name,score);
+            }
+            else if(!strcmp(user_input,"a"))
+            {
+                score+=10;
+                printf("Correct answer!\n\n");
+                goto game;
+
+            }
+            else {
+                printf("\nwrong answer!\nCorrect answer a");
+            }
+
+        }
+         else if(question_number==7)
+        {
+            printf("2014 Men's Hockey world cup champion?");
+            printf("\na. India \tb. China \nc. Australia \td. Dubai\n");
+            scanf("%s",&user_input);
+            if(!strcmp(user_input,EXIT))
+            {
+                exit(1);
+            }
+            else if(!strcmp(user_input,SCORE))
+            {
+                printf("Hello %s your total score: %d",user_name,score);
+            }
+            else if(!strcmp(user_input,"c"))
+            {
+                score+=10;
+                printf("Correct answer!\n\n");
+                goto game;
+
+            }
+            else {
+                printf("\nwrong answer!\nCorrect answer c");
+            }
+
+        }
+         else if(question_number==8)
+        {
+            printf("Name of the country which was recently suspended from G8?");
+            printf("\na. Russia \tb. Japan \nc. China \td. India\n");
+            scanf("%s",&user_input);
+            if(!strcmp(user_input,EXIT))
+            {
+                exit(1);
+            }
+            else if(!strcmp(user_input,SCORE))
+            {
+                printf("Hello %s your total score: %d",user_name,score);
+            }
+            else if(!strcmp(user_input,"a"))
+            {
+                score+=10;
+                printf("Correct answer!\n\n");
+                goto game;
+
+            }
+            else {
+                printf("\nwrong answer!\nCorrect answer a");
+            }
+
+        }
+         else if(question_number==9)
+        {
+            printf("2015 ICC world cup finalist?");
+            printf("\na. Australia \tb. India \nc. Sreelanka \td. Pakistan\n");
+            scanf("%s",&user_input);
+            if(!strcmp(user_input,EXIT))
+            {
+                exit(1);
+            }
+            else if(!strcmp(user_input,SCORE))
+            {
+                printf("Hello %s your total score: %d",user_name,score);
+            }
+            else if(!strcmp(user_input,"a"))
+            {
+                score+=10;
+                printf("Correct answer!\n\n");
+                goto game;
+
+            }
+            else {
+                printf("\nwrong answer!\nCorrect answer a");
+            }
+
+        }
+         else if(question_number==10)
+        {
+            printf("Galileo was an Italian astronomer who....");
+            printf("\na. Developed telescope \nb. Discovered four satellites of jupiter\nc. Discovered that the movement of pendulum produces a regular time measurement d. All of the above\n");
+            scanf("%s",&user_input);
+            if(!strcmp(user_input,EXIT))
+            {
+                exit(1);
+            }
+            else if(!strcmp(user_input,SCORE))
+            {
+                printf("Hello %s your total score: %d",user_name,score);
+            }
+            else if(!strcmp(user_input,"d"))
+            {
+                score+=10;
+                printf("Correct answer!\n\n");
+                goto game;
+
+            }
+            else {
+                printf("\nwrong answer!\nCorrect answer d");
+            }
+
+
+        }
+        else if(question_number==11)
+        {
+            printf("Which of these actors has never appeared in television advertisements?");
+            printf("\na.Hrithik Roshan \tb.Shah rukh khan\nc.Govinda \t\td.Sanjay Dutt\n");
+            scanf("%s",&user_input);
+            if(!strcmp(user_input,EXIT))
+            {
+                exit(1);
+            }
+            else if(!strcmp(user_input,SCORE))
+            {
+                printf("Hello %s your total score: %d",user_name,score);
+            }
+            else if(!strcmp(user_input,"d"))
+            {
+                score+=10;
+                printf("Correct answer!\n\n");
+                goto game;
+
+            }
+            else {
+                printf("\nwrong answer!\nCorrect answer d");
+            }
+
+        }
+        else if(question_number==12)
+        {
+            printf("What was Hritik Roshan's debut film?");
+            printf("\na.Koil mil gaya \tb.Kaho na pyaar hay \nc.Krrish \t\td.Jab tak hay jaan\n");
+            scanf("%s",&user_input);
+            if(!strcmp(user_input,EXIT))
+            {
+                exit(1);
+            }
+            else if(!strcmp(user_input,SCORE))
+            {
+                printf("Hello %s your total score: %d",user_name,score);
+            }
+            else if(!strcmp(user_input,"b"))
+            {
+                score+=10;
+                printf("Correct answer!\n\n");
+                goto game;
+
+            }
+            else {
+                printf("\nwrong answer!\nCorrect answer b");
+            }
+
+        }
+        else if(question_number==13)
+        {
+            printf("What is Lionel Messi's jersey number?");
+            printf("\na.12 \tb.10 \nc.6 \td.9 \n");
+            scanf("%s",&user_input);
+            if(!strcmp(user_input,EXIT))
+            {
+                exit(1);
+            }
+            else if(!strcmp(user_input,SCORE))
+            {
+                printf("Hello %s your total score: %d",user_name,score);
+            }
+            else if(!strcmp(user_input,"b"))
+            {
+                score+=10;
+                printf("Correct answer!\n\n");
+                goto game;
+
+            }
+            else {
+                printf("\nwrong answer!\nCorrect answer b");
+            }
+
+        }
+        else if(question_number==14)
+        {
+            printf("Where did messi grow up?");
+            printf("\na.North America \tb.Europe \nc.South America \td.France \n");
+            scanf("%s",&user_input);
+            if(!strcmp(user_input,EXIT))
+            {
+                exit(1);
+            }
+            else if(!strcmp(user_input,SCORE))
+            {
+                printf("Hello %s your total score: %d",user_name,score);
+            }
+            else if(!strcmp(user_input,"b"))
+            {
+                score+=10;
+                printf("Correct answer!\n\n");
+                goto game;
+
+            }
+            else {
+                printf("\nwrong answer!\nCorrect answer b");
+            }
+
+        }
+        else if(question_number==15)
+        {
+            printf("Which player is calling recenty by black tiger?");
+            printf("\na.Ashraful \tb.Mashrafe \nc.Rubel \td.Taskin \n");
+            scanf("%s",&user_input);
+            if(!strcmp(user_input,EXIT))
+            {
+                exit(1);
+            }
+            else if(!strcmp(user_input,SCORE))
+            {
+                printf("Hello %s your total score: %d",user_name,score);
+            }
+            else if(!strcmp(user_input,"c"))
+            {
+                score+=10;
+                printf("Correct answer!\n\n");
+                goto game;
+
+            }
+            else {
+                printf("\nwrong answer!\nCorrect answer c");
+            }
+
+        }
+        else if(question_number==16)
+        {
+            printf("The 'Pizza Hut' franchise began in what country?");
+            printf("\na.USA \t\tb.India \nc.Germany \td.Newzeland\n");
+            scanf("%s",&user_input);
+            if(!strcmp(user_input,EXIT))
+            {
+                exit(1);
+            }
+            else if(!strcmp(user_input,SCORE))
+            {
+                printf("Hello %s your total score: %d",user_name,score);
+            }
+            else if(!strcmp(user_input,"a"))
+            {
+                score+=10;
+                printf("Correct answer!\n\n");
+                goto game;
+
+            }
+            else {
+                printf("\nwrong answer!\nCorrect answer a");
+            }
+
+
+        }
+        else if(question_number==17)
+        {
+            printf("What was the first planet to be discovered using the telescope, in 1781?");
+            printf("\na.Uranus. \tb.Neptune. \nc.Mars. \td.Earth\n");
+            scanf("%s",&user_input);
+            if(!strcmp(user_input,EXIT))
+            {
+                exit(1);
+            }
+            else if(!strcmp(user_input,SCORE))
+            {
+                printf("Hello %s your total score: %d",user_name,score);
+            }
+            else if(!strcmp(user_input,"a"))
+            {
+                score+=10;
+                printf("Correct answer!\n\n");
+                goto game;
+
+            }
+            else {
+                printf("\nwrong answer!\nCorrect answer a");
+            }
+
+
+        }
+        else if(question_number==18)
+        {
+            printf("What is the minimum number of musicians a band must have to be considered a 'big band'?");
+            printf("\na.5 \tb.8 \nc.10 \td.7 \n");
+            scanf("%s",&user_input);
+            if(!strcmp(user_input,EXIT))
+            {
+                exit(1);
+            }
+            else if(!strcmp(user_input,SCORE))
+            {
+                printf("Hello %s your total score: %d",user_name,score);
+            }
+            else if(!strcmp(user_input,"c"))
+            {
+                score+=10;
+                printf("Correct answer!\n\n");
+                goto game;
+
+            }
+            else {
+                printf("\nwrong answer!\nCorrect answer c");
+            }
+
+
+        }
+        else if(question_number==19)
+        {
+            printf("Name the world's biggest island?");
+            printf("\na.Ireland \tb.Greenland \nc.Newzeland \td.Portland\n");
+            scanf("%s",&user_input);
+            if(!strcmp(user_input,EXIT))
+            {
+                exit(1);
+            }
+            else if(!strcmp(user_input,SCORE))
+            {
+                printf("Hello %s your total score: %d",user_name,score);
+            }
+            else if(!strcmp(user_input,"b"))
+            {
+                score+=10;
+                printf("Correct answer!\n\n");
+                goto game;
+
+            }
+            else {
+                printf("\nwrong answer!\nCorrect answer b");
+            }
+
+
+        }
+        else if(question_number==20)
+        {
+            printf("My Heart will go on came from which movie?");
+            printf("\na.Astro boy\tb.Titanic\nc.Eclipse\td.Guardian\n");
+            scanf("%s",&user_input);
+            if(!strcmp(user_input,EXIT))
+            {
+                exit(1);
+            }
+            else if(!strcmp(user_input,SCORE))
+            {
+                printf("Hello %s your total score: %d",user_name,score);
+            }
+            else if(!strcmp(user_input,"b"))
+            {
+                score+=10;
+                printf("Correct answer!\n\n");
+                goto game;
+
+            }
+            else {
+                printf("\nwrong answer!\nCorrect answer b");
+            }
+
+
+        }
+        else if(question_number==21)
+        {
+            printf("What is the main color on the chinese flag?");
+            printf("\na.Red.\t\tb.White.\nc.Blue.\t\td.Green\n");
+            scanf("%s",&user_input);
+            if(!strcmp(user_input,EXIT))
+            {
+                exit(1);
+            }
+            else if(!strcmp(user_input,SCORE))
+            {
+                printf("Hello %s your total score: %d",user_name,score);
+            }
+            else if(!strcmp(user_input,"a"))
+            {
+                score+=10;
+                printf("Correct answer!\n\n");
+                goto game;
+
+            }
+            else {
+                printf("\nwrong answer!\nCorrect answer a");
+            }
+
+
+        }
+        else if(question_number==22)
+        {
+            printf("On a computer keyboard what letter is between Q and E?");
+            printf("\na.R\tb.W\nc.D\td.S \n");
+            scanf("%s",&user_input);
+            if(!strcmp(user_input,EXIT))
+            {
+                exit(1);
+            }
+            else if(!strcmp(user_input,SCORE))
+            {
+                printf("Hello %s your total score: %d",user_name,score);
+            }
+            else if(!strcmp(user_input,"b"))
+            {
+                score+=10;
+                printf("Correct answer!\n\n");
+                goto game;
+
+            }
+            else {
+                printf("\nwrong answer!\nCorrect answer b");
+            }
+
+
+        }
+
+        printf("\n\nTotal score :%d",score);
+    }
+
+//Gama End
+
+
+    else if(!strcmp(user_input,EXIT))
+    {
+        system("cls");
+        printf("\n\t\t\tBye Bye!\n");
+        exit(1);
+    }
+    else if(!strcmp(user_input,HELP))
+    {
+        goto start;
+    }
+    else if(!strcmp(user_input,SCORE))
+    {
+        printf("Hello %s your total score: %d",user_name,score);
+    }
+    else
+    {
+        system("cls");
+        printf("\n\tSorry not a valid command\n");
+        goto start;
+    }
+
+    return 0;
+}
+
+
